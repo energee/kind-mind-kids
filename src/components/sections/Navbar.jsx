@@ -19,7 +19,7 @@ export default function Navbar() {
     { label: 'About', href: '#about' },
     { label: 'Programs', href: '#programs' },
     { label: 'Enrichment', href: '#enrichment' },
-    { label: 'Families', href: '#testimonials' },
+    // { label: 'Families', href: '#testimonials' }, (hidden with Testimonials, see App.jsx)
     { label: 'Contact', href: '#contact' },
   ]
 

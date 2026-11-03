@@ -33,7 +33,8 @@ export default function CTA() {
           </Button>
         </div>
       </div>
-      <Arc className="absolute bottom-6 inset-x-0 w-full h-8" />
+      {/* The section ends on the arc with white (the Contact section) below, like the logo */}
+      <Arc className="absolute bottom-0 inset-x-0 w-full h-8 sm:h-14" ground="fill-white" />
     </section>
   )
 }

@@ -26,7 +26,7 @@ export default function Hero() {
 
         {/* The photo stands on the logo's yellow arc, the way the KMK blocks do */}
         <div className="relative w-full max-w-[460px] mx-auto">
-          <div className="aspect-[3/2] md:aspect-[1199/1280] rounded-lg overflow-hidden bg-blue-dark">
+          <div className="relative z-10 aspect-[3/2] md:aspect-[1199/1280] rounded-lg overflow-hidden bg-blue-dark">
             <picture>
               <source
                 media="(min-width: 768px)"
@@ -44,7 +44,9 @@ export default function Hero() {
               />
             </picture>
           </div>
-          <Arc className="absolute -bottom-4 -left-[8%] w-[116%] h-7" />
+          {/* Behind the photo, like the band behind the logo's blocks: at the photo's corners
+              the band is centered on its bottom edge, so only the two ends show */}
+          <Arc className="absolute -bottom-3.5 left-1/2 -translate-x-1/2 w-[110%] md:w-[135%] h-11" />
         </div>
       </div>
     </section>

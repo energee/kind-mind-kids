@@ -6,6 +6,11 @@ import { useEffect, useState } from 'react'
 
 const programs = [
   {
+    image: '/images/kindmind/infant-ball-play.webp',
+    alt: 'Babies exploring colorful balls together during outdoor sensory play',
+    imageWidth: 720,
+    imageHeight: 720,
+    caption: 'Colorful discoveries and time together.',
     age: '6 weeks and up',
     id: 'infant',
     short: 'Infants',
@@ -15,6 +20,11 @@ const programs = [
     ink: 'text-blue-dark',
   },
   {
+    image: '/images/kindmind/one-year-sensory.webp',
+    alt: 'A young child exploring toy dinosaurs in an indoor sensory table',
+    imageWidth: 1280,
+    imageHeight: 1280,
+    caption: 'Hands-on discoveries at the sensory table.',
     age: '12 to 23 months',
     id: 'one-year-olds',
     short: 'Ones',
@@ -24,6 +34,11 @@ const programs = [
     ink: 'text-orange-dark',
   },
   {
+    image: '/images/kindmind/toddler-sensory.webp',
+    alt: 'Children exploring cups, colorful pom-poms, and tubes at a classroom sensory table',
+    imageWidth: 1280,
+    imageHeight: 1280,
+    caption: 'Exploring textures and playing alongside friends.',
     age: '2 years',
     id: 'toddlers',
     short: 'Twos',
@@ -33,6 +48,11 @@ const programs = [
     ink: 'text-yellow-dark',
   },
   {
+    image: '/images/kindmind/preschool-outdoor-play.webp',
+    alt: 'A child in a red raincoat jumping during outdoor group play',
+    imageWidth: 720,
+    imageHeight: 720,
+    caption: 'Room to move, laugh, and play together.',
     age: '3 years',
     id: 'preschool',
     short: 'Threes',
@@ -42,6 +62,11 @@ const programs = [
     ink: 'text-green-dark',
   },
   {
+    image: '/images/kindmind/pre-k-discovery.webp',
+    alt: 'A child holding an activity sheet with pictures of community helpers',
+    imageWidth: 1280,
+    imageHeight: 1280,
+    caption: 'New ideas and discoveries, one activity at a time.',
     age: '4 to 5 years',
     id: 'pre-k',
     short: 'Pre-K',
@@ -111,39 +136,38 @@ export default function Programs() {
           })}
         </div>
 
-        <div className="grid md:grid-cols-[1.1fr_1fr] gap-8 lg:gap-14 items-center">
-          <figure>
-            <div className="aspect-[4/3] rounded-lg overflow-hidden">
-              <img
-                src="/images/kindmind/garden-discovery.webp"
-                alt="A Kind Mind Kids child proudly holding a freshly picked carrot"
-                width="1024"
-                height="1280"
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
-            <figcaption className="mt-3 text-xs text-muted-foreground">
-              Garden time with our older children. Visit to see your child's classroom.
-            </figcaption>
-          </figure>
-          <div>
-            {programs.map((p, i) => (
-              <div
-                key={p.id}
-                id={p.id}
-                role="tabpanel"
-                aria-labelledby={`tab-${p.id}`}
-                hidden={i !== active}
-              >
-                <p className={`font-semibold mb-2 ${p.ink}`}>{p.age}</p>
-                <h3 className="font-display text-3xl lg:text-4xl font-semibold mb-4">{p.title}</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">{p.desc}</p>
+        {programs.map((p, i) => (
+          <div
+            key={p.id}
+            id={p.id}
+            role="tabpanel"
+            aria-labelledby={`tab-${p.id}`}
+            hidden={i !== active}
+            className="grid md:grid-cols-[1.1fr_1fr] gap-8 lg:gap-14 items-center"
+          >
+            <figure>
+              <div className="aspect-square rounded-lg overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.alt}
+                  width={p.imageWidth}
+                  height={p.imageHeight}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
+              <figcaption className="mt-3 text-xs text-muted-foreground">
+                {p.caption}
+              </figcaption>
+            </figure>
+            <div>
+              <p className={`font-semibold mb-2 ${p.ink}`}>{p.age}</p>
+              <h3 className="font-display text-3xl lg:text-4xl font-semibold mb-4">{p.title}</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">{p.desc}</p>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   )

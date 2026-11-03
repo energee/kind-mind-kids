@@ -4,7 +4,9 @@ import About from '@/components/sections/About'
 import Programs from '@/components/sections/Programs'
 import Enrichment from '@/components/sections/Enrichment'
 import WhyUs from '@/components/sections/WhyUs'
-import Testimonials from '@/components/sections/Testimonials'
+// Testimonials hidden until real reviews are in; restore this import, the <Testimonials /> line
+// below and the Families link in Navbar.jsx
+// import Testimonials from '@/components/sections/Testimonials'
 import Facilities from '@/components/sections/Facilities'
 import Faq from '@/components/sections/Faq'
 import CTA from '@/components/sections/CTA'
@@ -20,7 +22,7 @@ export default function App() {
       <About />
       <Programs />
       <Enrichment />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Facilities />
       <Faq />
       <CTA />

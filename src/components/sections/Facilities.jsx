@@ -31,17 +31,17 @@ export default function Facilities() {
         <figure>
           <div className="aspect-[4/3] rounded-lg overflow-hidden">
             <img
-              src="/images/kindmind/learning-in-the-garden.webp"
-              alt="Kind Mind Kids children and an educator sharing a garden discovery"
+              src="/images/kindmind/outdoor-water-play.webp"
+              alt="Children exploring outdoor water tables with an adult nearby"
               width="1280"
-              height="1225"
+              height="960"
               loading="lazy"
               decoding="async"
-              className="w-full h-full object-cover object-top"
+              className="w-full h-full object-cover"
             />
           </div>
           <figcaption className="mt-3 text-xs text-muted-foreground">
-            A garden activity with Kind Mind Kids. Schedule a tour to see our classrooms and outdoor play space.
+            Outdoor water play with Kind Mind Kids. Visit to explore our classrooms and play space.
           </figcaption>
         </figure>
       </div>

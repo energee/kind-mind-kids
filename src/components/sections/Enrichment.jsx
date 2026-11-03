@@ -49,49 +49,49 @@ export default function Enrichment() {
           <figure>
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
               <img
-                src="/images/kindmind/friends-at-the-farm.webp"
-                alt="Kind Mind Kids children standing together among pumpkins at a farm"
-                width="1277"
-                height="1280"
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover object-[center_40%]"
-              />
-            </div>
-            <figcaption className="mt-3 text-sm text-white/85">
-              Making memories together on a farm outing.
-            </figcaption>
-          </figure>
-          <figure>
-            <div className="aspect-[4/3] rounded-lg overflow-hidden">
-              <img
-                src="/images/kindmind/hayride-friends.webp"
-                alt="Three Kind Mind Kids children sitting together on a hayride"
+                src="/images/kindmind/farm-corn-discovery.webp"
+                alt="Children watching a corn demonstration during a farm visit"
                 width="1280"
-                height="930"
+                height="960"
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>
             <figcaption className="mt-3 text-sm text-white/85">
-              Sharing a hayride with friends on our farm outing.
+              Learning about corn during a farm visit.
             </figcaption>
           </figure>
           <figure>
             <div className="aspect-[4/3] rounded-lg overflow-hidden">
               <img
-                src="/images/kindmind/playful-tunnel.webp"
-                alt="A smiling Kind Mind Kids child waving through a painted tire tunnel"
-                width="1170"
-                height="1280"
+                src="/images/kindmind/soccer-learning.webp"
+                alt="A soccer instructor guiding children through an indoor ball activity"
+                width="960"
+                height="720"
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-cover object-[center_35%]"
+                className="w-full h-full object-cover"
               />
             </div>
             <figcaption className="mt-3 text-sm text-white/85">
-              A playful moment during our farm visit.
+              Practicing movement and taking turns at soccer.
+            </figcaption>
+          </figure>
+          <figure>
+            <div className="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="/images/kindmind/camping-friends.webp"
+                alt="Four children sharing a trail-mix break on a bench during a camping outing"
+                width="1280"
+                height="960"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <figcaption className="mt-3 text-sm text-white/85">
+              Sharing a trail-mix break on our camping outing.
             </figcaption>
           </figure>
         </div>

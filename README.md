@@ -36,17 +36,28 @@ The page's design language comes from the logo:
 
 ## Approved Kind Mind Kids photo exports
 
-Six photos selected from 56 publicly accessible images on the center's
-[Facebook gallery](https://www.facebook.com/kindmindkids/photos) have been edited
-with the user's approval. Website-ready WebP files live in
-`public/images/kindmind/`; `garden-with-teacher-hero.webp` is an additional
-1536 × 1024 landscape crop. The hero uses the landscape crop on mobile and the
-portrait edit on desktop. The program tabs share the garden-discovery photo,
-captioned as an activity with older children rather than an infant-room photo.
-The facilities section uses learning-in-the-garden with a tour caption, not a
-claim to show classroom interiors. All three farm photos appear in enrichment
-with outing captions. Every photographic image on the site is now center-approved;
-the original stock photos have been removed. Brand logos remain unchanged.
+The website uses ten distinct center-approved photographs: seven selected from
+nine user uploads, two additional public Facebook photos (indoor soccer and a
+camping outing), and the original garden hero. Website-ready WebP files live in
+`public/images/kindmind/`. The garden scene appears only in the hero, with
+landscape and portrait crops for mobile and desktop.
+
+Each program tab has its own square photograph:
+
+| Program | Image | Uploaded attachment |
+| --- | --- | --- |
+| Infants | `infant-ball-play.webp` | 3 |
+| One-year-olds | `one-year-sensory.webp` | 7 |
+| Two-year-olds | `toddler-sensory.webp` | 9 |
+| Preschool | `preschool-outdoor-play.webp` | 5 |
+| Pre-K | `pre-k-discovery.webp` | 4 |
+
+Placements are editorial age-appropriate selections; exact ages and classroom
+membership were not supplied. Alt text and captions describe visible activities
+without asserting individual ages. Facilities shows the uploaded water-play
+photo. Enrichment shows a corn demonstration, indoor soccer, and a camping
+snack break. No photo is reused across sections; no stock photography remains.
+Brand logos are unchanged.
 
 Corrections include individual white balance, selective shadow recovery, gentle
 exposure correction, restrained color, composition crops, and web output
@@ -54,11 +65,12 @@ sharpening. No people, facial features, or locations were generated or replaced.
 Exports use sRGB color profiles and omit original EXIF metadata. The farm images
 depict an outing and must not be presented as the center's facilities.
 
-`photo-edits/before-after.jpg` shows the selected images.
-`photo-edits/manifest.json` records source links, crops, dimensions, editing
-parameters, and suggested alt text. `photo-edits/kindmind-photo-package.zip`
-contains the six unmodified Facebook downloads, seven high-quality JPEG edited
-masters, seven WebP exports, the comparison sheet, and the manifest.
+`photo-edits/before-after.jpg` compares the current ten selected scenes.
+`photo-edits/manifest.json` records provenance, crops, dimensions, editing
+parameters, alt text, and placement. `photo-edits/kindmind-photo-package.zip`
+contains all nine untouched uploads (including the two not selected), the three
+retained Facebook source downloads, eleven JPEG edited masters, eleven WebP
+exports, the comparison sheet, and the current manifest.
 
 ## SEO and answer engines
 
@@ -70,5 +82,17 @@ masters, seven WebP exports, the comparison sheet, and the manifest.
 - **Structured data.** `index.html` holds `ChildCare` JSON-LD (address, phone, hours);
   keep it in sync with `Contact.jsx`. `Faq.jsx` renders the visible FAQ and its
   `FAQPage` JSON-LD from one array, so answers only need editing in one place.
-- **Not yet set up (needs the live domain):** canonical URL, `og:image`, `url`/`logo`
-  in the JSON-LD, `sitemap.xml`, and `robots.txt` with a sitemap line.
+- **Domain metadata** (all for `https://kindmindkids.org/`): canonical URL, Open Graph
+  and `twitter:card` tags in `index.html`, `url`/`logo`/`image`/`geo` in the JSON-LD,
+  `public/robots.txt`, and a one-page `public/sitemap.xml`. Change all of them together
+  if the domain changes.
+- **Share and icon images.** `public/og-image.jpg` (1200x630, cropped from the hero
+  photo) is the link-preview image; `public/apple-touch-icon.png` (180x180, from
+  `kmk-mark.svg`) is the iPhone home-screen icon and the JSON-LD logo.
+
+## Deployment
+
+GitHub Pages serves kindmindkids.org from github.com/energee/kind-mind-kids.
+`.github/workflows/deploy.yml` runs `npm run build` on every push to `main` and
+publishes `dist/`. The Pages source must be set to "GitHub Actions" (not "Deploy from
+a branch"). `public/CNAME` carries the custom domain into `dist/`.

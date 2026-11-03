@@ -1,10 +1,95 @@
 {
   "sourcePage": "https://www.facebook.com/kindmindkids/photos",
-  "reviewedPublicPhotos": 56,
-  "selectedPhotos": 6,
-  "permission": "User confirmed these photos are approved for use.",
-  "processing": "Individual white balance, selective shadow recovery, softly masked exposure corrections, restrained color correction, editorial cropping, web-only output sharpening. Original people and locations retained; no generative edits or skin smoothing. Exports use embedded sRGB profiles without original EXIF metadata.",
-  "scope": "All website photography replaced with these six approved Kind Mind Kids photos. The hero has responsive portrait and landscape crops. Program tabs share a garden activity photo explicitly captioned as older children; the facilities section shows a garden activity with a tour caption, not classroom interiors. All three farm photos appear in enrichment as outings. No stock photos remain; brand logos are unchanged.",
+  "permission": "User confirmed Facebook photos are approved for website use and supplied nine additional photos.",
+  "activePhotographs": 10,
+  "webExports": 11,
+  "uploadedPhotos": 9,
+  "processing": "Individual white balance, selective shadow recovery, gentle exposure and color correction, editorial crops, and web output sharpening. No generative changes, face reshaping, or skin smoothing. sRGB exports without original EXIF. No upscaling.",
+  "scope": "Five distinct program photos; uploaded water play for facilities; corn demonstration, indoor soccer and camping snack break for enrichment. Garden scene only in responsive hero. No photographs repeated across sections. No stock photography.",
+  "ageEvidence": "Program placements are editorial selections from user-supplied images. Exact ages and classroom membership were not supplied. Captions and alt text describe visible activities, not individual ages.",
+  "uploads": [
+    {
+      "attachment": 1,
+      "file": "originals/upload-01.png",
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "selected": true
+    },
+    {
+      "attachment": 2,
+      "file": "originals/upload-02.png",
+      "sourceDimensions": [
+        720,
+        960
+      ],
+      "selected": false
+    },
+    {
+      "attachment": 3,
+      "file": "originals/upload-03.png",
+      "sourceDimensions": [
+        720,
+        960
+      ],
+      "selected": true
+    },
+    {
+      "attachment": 4,
+      "file": "originals/upload-04.png",
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "selected": true
+    },
+    {
+      "attachment": 5,
+      "file": "originals/upload-05.png",
+      "sourceDimensions": [
+        720,
+        960
+      ],
+      "selected": true
+    },
+    {
+      "attachment": 6,
+      "file": "originals/upload-06.png",
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "selected": true
+    },
+    {
+      "attachment": 7,
+      "file": "originals/upload-07.png",
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "selected": true
+    },
+    {
+      "attachment": 8,
+      "file": "originals/upload-08.png",
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "selected": false
+    },
+    {
+      "attachment": 9,
+      "file": "originals/upload-09.png",
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "selected": true
+    }
+  ],
   "images": [
     {
       "name": "garden-with-teacher",
@@ -49,224 +134,8 @@
         ]
       },
       "alt": "An educator and children examining a freshly harvested carrot",
-      "webBytes": 348794
-    },
-    {
-      "name": "garden-discovery",
-      "source": "https://www.facebook.com/photo.php?fbid=1603643201463574&set=pb.100054537291173.-2207520000&type=3",
-      "sourceDimensions": [
-        1536,
-        2048
-      ],
-      "crop": [
-        140,
-        300,
-        1370,
-        1838
-      ],
-      "webDimensions": [
-        1024,
-        1280
-      ],
-      "edits": {
-        "crop": [
-          140,
-          300,
-          1370,
-          1838
-        ],
-        "shadows": 0.1,
-        "exposure": 1.015,
-        "saturation": 0.97,
-        "balance": [
-          1.005,
-          1.0,
-          1.0
-        ],
-        "dodge": [
-          [
-            0.48,
-            0.34,
-            0.2,
-            0.18,
-            0.06
-          ]
-        ]
-      },
-      "alt": "A child proudly holding a freshly picked carrot",
-      "webBytes": 162642
-    },
-    {
-      "name": "learning-in-the-garden",
-      "source": "https://www.facebook.com/photo.php?fbid=1603643178130243&set=pb.100054537291173.-2207520000&type=3",
-      "sourceDimensions": [
-        1536,
-        2048
-      ],
-      "crop": [
-        0,
-        200,
-        1536,
-        1670
-      ],
-      "webDimensions": [
-        1280,
-        1225
-      ],
-      "edits": {
-        "crop": [
-          0,
-          200,
-          1536,
-          1670
-        ],
-        "shadows": 0.13,
-        "exposure": 1.015,
-        "saturation": 0.96,
-        "balance": [
-          1.005,
-          1.0,
-          1.0
-        ],
-        "dodge": []
-      },
-      "alt": "Children and an educator sharing a garden discovery",
-      "webBytes": 434746
-    },
-    {
-      "name": "friends-at-the-farm",
-      "source": "https://www.facebook.com/photo.php?fbid=1638100428017851&set=pb.100054537291173.-2207520000&type=3",
-      "sourceDimensions": [
-        1536,
-        2048
-      ],
-      "crop": [
-        0,
-        400,
-        1536,
-        1940
-      ],
-      "webDimensions": [
-        1277,
-        1280
-      ],
-      "edits": {
-        "crop": [
-          0,
-          400,
-          1536,
-          1940
-        ],
-        "shadows": 0.23,
-        "exposure": 1.0,
-        "saturation": 0.96,
-        "balance": [
-          0.995,
-          1.0,
-          1.018
-        ],
-        "dodge": [
-          [
-            0.51,
-            0.59,
-            0.42,
-            0.22,
-            0.1
-          ]
-        ]
-      },
-      "alt": "Children standing together among pumpkins at a farm",
-      "webBytes": 366234
-    },
-    {
-      "name": "hayride-friends",
-      "source": "https://www.facebook.com/photo.php?fbid=1638100281351199&set=pb.100054537291173.-2207520000&type=3",
-      "sourceDimensions": [
-        2048,
-        1536
-      ],
-      "crop": [
-        50,
-        120,
-        1998,
-        1536
-      ],
-      "webDimensions": [
-        1280,
-        930
-      ],
-      "edits": {
-        "crop": [
-          50,
-          120,
-          1998,
-          1536
-        ],
-        "shadows": 0.19,
-        "exposure": 0.99,
-        "saturation": 0.95,
-        "balance": [
-          0.99,
-          1.0,
-          1.025
-        ],
-        "dodge": [
-          [
-            0.45,
-            0.48,
-            0.4,
-            0.26,
-            0.04
-          ]
-        ]
-      },
-      "alt": "Three children sitting together on a hayride",
-      "webBytes": 197650
-    },
-    {
-      "name": "playful-tunnel",
-      "source": "https://www.facebook.com/photo.php?fbid=1638101321351095&set=pb.100054537291173.-2207520000&type=3",
-      "sourceDimensions": [
-        1536,
-        2048
-      ],
-      "crop": [
-        0,
-        160,
-        1536,
-        1840
-      ],
-      "webDimensions": [
-        1170,
-        1280
-      ],
-      "edits": {
-        "crop": [
-          0,
-          160,
-          1536,
-          1840
-        ],
-        "shadows": 0.18,
-        "exposure": 0.995,
-        "saturation": 0.95,
-        "balance": [
-          0.995,
-          1.0,
-          1.012
-        ],
-        "dodge": [
-          [
-            0.43,
-            0.43,
-            0.18,
-            0.18,
-            0.13
-          ]
-        ]
-      },
-      "alt": "A smiling child waving through a painted tire tunnel",
-      "webBytes": 435956
+      "webBytes": 348794,
+      "section": "hero"
     },
     {
       "name": "garden-with-teacher-hero",
@@ -287,7 +156,406 @@
       ],
       "webBytes": 317358,
       "alt": "An educator and children examining a freshly harvested carrot",
-      "edits": "Same photographic corrections as garden-with-teacher; additional landscape crop."
+      "edits": "Same photographic corrections as garden-with-teacher; additional landscape crop.",
+      "section": "hero"
+    },
+    {
+      "name": "infant-ball-play",
+      "source": {
+        "type": "user-upload",
+        "attachment": 3,
+        "file": "originals/upload-03.png"
+      },
+      "sourceDimensions": [
+        720,
+        960
+      ],
+      "crop": [
+        0,
+        70,
+        720,
+        790
+      ],
+      "webDimensions": [
+        720,
+        720
+      ],
+      "webBytes": 103134,
+      "edits": {
+        "shadows": 0.12,
+        "exposure": 0.99,
+        "saturation": 0.97,
+        "balance": [
+          1.0,
+          1.0,
+          1.005
+        ],
+        "dodge": [],
+        "crop": [
+          0,
+          70,
+          720,
+          790
+        ]
+      },
+      "alt": "Babies exploring colorful balls together during outdoor sensory play",
+      "section": "program:infant",
+      "caption": "Colorful discoveries and time together.",
+      "ageEvidence": "Editorial age-appropriate placement from user-provided selection; exact ages and classroom membership not supplied."
+    },
+    {
+      "name": "one-year-sensory",
+      "source": {
+        "type": "user-upload",
+        "attachment": 7,
+        "file": "originals/upload-07.png"
+      },
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        39,
+        1536,
+        1575
+      ],
+      "webDimensions": [
+        1280,
+        1280
+      ],
+      "webBytes": 105452,
+      "edits": {
+        "shadows": 0.08,
+        "exposure": 1.01,
+        "saturation": 0.98,
+        "balance": [
+          1.0,
+          1.0,
+          1.01
+        ],
+        "dodge": [],
+        "crop": [
+          0,
+          39,
+          1536,
+          1575
+        ]
+      },
+      "alt": "A young child exploring toy dinosaurs in an indoor sensory table",
+      "section": "program:one-year-olds",
+      "caption": "Hands-on discoveries at the sensory table.",
+      "ageEvidence": "Editorial age-appropriate placement from user-provided selection; exact ages and classroom membership not supplied."
+    },
+    {
+      "name": "toddler-sensory",
+      "source": {
+        "type": "user-upload",
+        "attachment": 9,
+        "file": "originals/upload-09.png"
+      },
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        104,
+        1536,
+        1640
+      ],
+      "webDimensions": [
+        1280,
+        1280
+      ],
+      "webBytes": 260536,
+      "edits": {
+        "shadows": 0.15,
+        "exposure": 1.025,
+        "saturation": 0.98,
+        "balance": [
+          1.01,
+          1.0,
+          1.005
+        ],
+        "dodge": [],
+        "crop": [
+          0,
+          104,
+          1536,
+          1640
+        ]
+      },
+      "alt": "Children exploring cups, colorful pom-poms, and tubes at a classroom sensory table",
+      "section": "program:toddlers",
+      "caption": "Exploring textures and playing alongside friends.",
+      "ageEvidence": "Editorial age-appropriate placement from user-provided selection; exact ages and classroom membership not supplied."
+    },
+    {
+      "name": "preschool-outdoor-play",
+      "source": {
+        "type": "user-upload",
+        "attachment": 5,
+        "file": "originals/upload-05.png"
+      },
+      "sourceDimensions": [
+        720,
+        960
+      ],
+      "crop": [
+        0,
+        0,
+        720,
+        720
+      ],
+      "webDimensions": [
+        720,
+        720
+      ],
+      "webBytes": 74040,
+      "edits": {
+        "shadows": 0.08,
+        "exposure": 1.02,
+        "saturation": 0.98,
+        "balance": [
+          1.005,
+          1.0,
+          1.0
+        ],
+        "dodge": [],
+        "crop": [
+          0,
+          0,
+          720,
+          720
+        ]
+      },
+      "alt": "A child in a red raincoat jumping during outdoor group play",
+      "section": "program:preschool",
+      "caption": "Room to move, laugh, and play together.",
+      "ageEvidence": "Editorial age-appropriate placement from user-provided selection; exact ages and classroom membership not supplied."
+    },
+    {
+      "name": "pre-k-discovery",
+      "source": {
+        "type": "user-upload",
+        "attachment": 4,
+        "file": "originals/upload-04.png"
+      },
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        0,
+        1536,
+        1536
+      ],
+      "webDimensions": [
+        1280,
+        1280
+      ],
+      "webBytes": 269892,
+      "edits": {
+        "shadows": 0.1,
+        "exposure": 1.01,
+        "saturation": 0.98,
+        "balance": [
+          1.0,
+          1.0,
+          1.005
+        ],
+        "dodge": [],
+        "crop": [
+          0,
+          0,
+          1536,
+          1536
+        ]
+      },
+      "alt": "A child holding an activity sheet with pictures of community helpers",
+      "section": "program:pre-k",
+      "caption": "New ideas and discoveries, one activity at a time.",
+      "ageEvidence": "Editorial age-appropriate placement from user-provided selection; exact ages and classroom membership not supplied."
+    },
+    {
+      "name": "outdoor-water-play",
+      "source": {
+        "type": "user-upload",
+        "attachment": 6,
+        "file": "originals/upload-06.png"
+      },
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        353,
+        1536,
+        1505
+      ],
+      "webDimensions": [
+        1280,
+        960
+      ],
+      "webBytes": 355634,
+      "edits": {
+        "shadows": 0.18,
+        "exposure": 1.005,
+        "saturation": 0.96,
+        "balance": [
+          1.0,
+          1.0,
+          1.01
+        ],
+        "dodge": [],
+        "crop": [
+          0,
+          353,
+          1536,
+          1505
+        ]
+      },
+      "alt": "Children exploring outdoor water tables with an adult nearby",
+      "section": "facilities",
+      "caption": "Outdoor water play with Kind Mind Kids. Visit to explore our classrooms and play space.",
+      "ageEvidence": null
+    },
+    {
+      "name": "farm-corn-discovery",
+      "source": {
+        "type": "user-upload",
+        "attachment": 1,
+        "file": "originals/upload-01.png"
+      },
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        405,
+        1536,
+        1557
+      ],
+      "webDimensions": [
+        1280,
+        960
+      ],
+      "webBytes": 334104,
+      "edits": {
+        "shadows": 0.12,
+        "exposure": 1.02,
+        "saturation": 0.97,
+        "balance": [
+          1.005,
+          1.0,
+          1.0
+        ],
+        "dodge": [],
+        "crop": [
+          0,
+          405,
+          1536,
+          1557
+        ]
+      },
+      "alt": "Children watching a corn demonstration during a farm visit",
+      "section": "enrichment",
+      "caption": "Learning about corn during a farm visit.",
+      "ageEvidence": null
+    },
+    {
+      "name": "soccer-learning",
+      "source": {
+        "type": "public-facebook",
+        "page": "https://www.facebook.com/photo/?fbid=833527768475125&set=a.586779566483281",
+        "file": "originals/indoor-soccer-group.jpg",
+        "postText": "Log In\nForgot Account?\nKind Mind Kids Early Learning Center\nSeptember 27, 2023, view post\nWednesday, September 27, 2023 at 12:09\u202fPM\nSeptember 27, 2023\n\u00a0\n\u00b7\nLike\nComment\nComments\nNo comments yet\nBe the first to comment.\nSee more on Facebook\nEmail or phone number\nPassword\nLog In\nForgot password?\nor\nCreate new account"
+      },
+      "sourceDimensions": [
+        960,
+        720
+      ],
+      "crop": [
+        0,
+        0,
+        960,
+        720
+      ],
+      "webDimensions": [
+        960,
+        720
+      ],
+      "webBytes": 72580,
+      "edits": {
+        "shadows": 0.2,
+        "exposure": 1.025,
+        "saturation": 0.98,
+        "balance": [
+          0.985,
+          1.0,
+          1.045
+        ],
+        "dodge": [],
+        "crop": [
+          0,
+          0,
+          960,
+          720
+        ]
+      },
+      "alt": "A soccer instructor guiding children through an indoor ball activity",
+      "section": "enrichment",
+      "caption": "Practicing movement and taking turns at soccer.",
+      "ageEvidence": null
+    },
+    {
+      "name": "camping-friends",
+      "source": {
+        "type": "public-facebook",
+        "page": "https://www.facebook.com/photo/?fbid=1578503047310923&set=pcb.1578505260644035",
+        "file": "originals/trail-mix-friends.jpg",
+        "postText": "As part of our Camping curriculum, we got to venture outside and spend some time in nature, hiking! We had so much fun learning outside the classroom and taking our own adventure into the woods! It was a beautiful morning for a hike and trail mix!"
+      },
+      "sourceDimensions": [
+        2048,
+        1536
+      ],
+      "crop": [
+        0,
+        0,
+        2048,
+        1536
+      ],
+      "webDimensions": [
+        1280,
+        960
+      ],
+      "webBytes": 358554,
+      "edits": {
+        "shadows": 0.18,
+        "exposure": 0.995,
+        "saturation": 0.95,
+        "balance": [
+          0.995,
+          1.0,
+          1.01
+        ],
+        "dodge": [],
+        "crop": [
+          0,
+          0,
+          2048,
+          1536
+        ]
+      },
+      "alt": "Four children sharing a trail-mix break on a bench during a camping outing",
+      "section": "enrichment",
+      "caption": "Sharing a trail-mix break on our camping outing.",
+      "ageEvidence": null
     }
   ]
 }

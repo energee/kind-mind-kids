@@ -1,37 +1,39 @@
-import { useReveal } from '@/hooks/useReveal'
 import { Button } from '@/components/ui/button'
-import { Phone, Mail } from 'lucide-react'
+import Arc from '@/components/brand/Arc'
+
+// The two stars above the children's hands in the logo, reused once here
+function Star({ className }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className={`fill-yellow ${className}`}>
+      <path d="M12 2.5l2.8 6.3 6.9.7-5.2 4.6 1.5 6.8L12 17.4l-6 3.5 1.5-6.8-5.2-4.6 6.9-.7z" />
+    </svg>
+  )
+}
 
 export default function CTA() {
-  const ref = useReveal()
-
   return (
-    <section className="py-20 lg:py-28 bg-gradient-to-br from-terracotta to-terracotta-dark relative overflow-hidden" ref={ref}>
-      <div className="absolute -top-1/2 -left-[20%] w-[60%] h-[200%] bg-[radial-gradient(ellipse,rgba(255,255,255,0.06)_0%,transparent_70%)] pointer-events-none" />
-      <div className="absolute -bottom-[30%] -right-[10%] w-[40%] h-[150%] bg-[radial-gradient(ellipse,rgba(255,255,255,0.04)_0%,transparent_70%)] pointer-events-none" />
-
-      <div className="max-w-[700px] mx-auto px-6 text-center relative z-10 reveal">
-        <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold leading-tight text-white mb-4">
-          Ready to give your child the Kind Mind experience?
+    <section className="relative bg-orange-dark pt-20 pb-28 lg:pt-28 lg:pb-36 overflow-hidden">
+      <div className="max-w-[700px] mx-auto px-6 text-center">
+        <div className="flex justify-center gap-16 mb-4">
+          <Star className="w-6 h-6 -rotate-12" />
+          <Star className="w-7 h-7 rotate-12 -mt-2" />
+        </div>
+        <h2 className="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-semibold leading-tight text-white mb-4">
+          Come see us in person
         </h2>
-        <p className="text-lg text-white/80 leading-relaxed mb-8">
-          Schedule a tour to see our warm, nurturing environment in person. Limited spots available — we intentionally keep our enrollment small to ensure every child gets the attention they deserve.
+        <p className="text-lg text-white/90 leading-relaxed mb-8">
+          The best way to know if we're the right fit is to visit. Call to schedule a tour. We keep enrollment small, so spots fill up.
         </p>
         <div className="flex flex-wrap justify-center gap-3">
-          <Button asChild size="lg" className="rounded-full bg-white text-terracotta-dark hover:bg-cream shadow-[0_4px_20px_rgba(0,0,0,0.15)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)] hover:-translate-y-0.5 transition-all">
-            <a href="tel:3028931800">
-              <Phone className="w-4 h-4 mr-2" />
-              Call (302) 893-1800
-            </a>
+          <Button asChild size="lg" className="rounded-lg bg-white text-orange-dark hover:bg-sky transition-all">
+            <a href="tel:3028931800">Call (302) 893-1800</a>
           </Button>
-          <Button asChild variant="outline" size="lg" className="rounded-full border-white/40 text-white hover:bg-white hover:text-terracotta hover:border-white transition-all">
-            <a href="mailto:kindmindkids@gmail.com">
-              <Mail className="w-4 h-4 mr-2" />
-              Email Us
-            </a>
+          <Button asChild variant="outline" size="lg" className="rounded-lg bg-transparent border-white/50 text-white hover:bg-white hover:text-orange-dark hover:border-white transition-all">
+            <a href="mailto:kindmindkids@gmail.com">Email Us</a>
           </Button>
         </div>
       </div>
+      <Arc className="absolute bottom-6 inset-x-0 w-full h-8" />
     </section>
   )
 }

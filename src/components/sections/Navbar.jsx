@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
-import { Menu, X, Phone } from 'lucide-react'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [pastHero, setPastHero] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 50)
+      setPastHero(window.scrollY > 600)
+    }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -34,36 +37,21 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
           scrolled
-            ? 'bg-cream/92 backdrop-blur-xl shadow-[0_2px_30px_rgba(0,0,0,0.06)] py-3'
+            ? 'bg-white/92 backdrop-blur-xl shadow-[0_2px_30px_rgba(0,0,0,0.06)] py-3'
             : 'py-5'
         }`}
       >
         <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between">
           <a
             href="#"
-            className="flex items-center gap-2.5 font-display text-xl font-semibold"
+            className="flex items-center gap-2.5"
             onClick={(e) => {
               e.preventDefault()
               window.scrollTo({ top: 0, behavior: 'smooth' })
             }}
           >
-            <svg viewBox="0 0 42 42" fill="none" className="w-10 h-10">
-              <circle cx="21" cy="21" r="20" fill="#8B9E7E" opacity="0.15" />
-              <circle cx="21" cy="21" r="14" fill="#8B9E7E" opacity="0.25" />
-              <path
-                d="M21 10C18 10 14 12 14 17C14 20 16 21 18 21C16 22 15 24 15 27C15 30 17 32 21 32C25 32 27 30 27 27C27 24 26 22 24 21C26 21 28 20 28 17C28 12 24 10 21 10Z"
-                fill="#8B9E7E"
-              />
-              <circle cx="18.5" cy="17" r="1.5" fill="white" />
-              <circle cx="23.5" cy="17" r="1.5" fill="white" />
-              <path
-                d="M19 20.5C19 20.5 20 21.5 21 21.5C22 21.5 23 20.5 23 20.5"
-                stroke="white"
-                strokeWidth="1"
-                strokeLinecap="round"
-              />
-            </svg>
-            Kind Mind Kids
+            <img src="/brand/kmk-mark.svg" alt="" width="1010" height="833" className="h-11 w-auto" />
+            <img src="/brand/kmk-wordmark.svg" alt="Kind Mind Kids" width="1752" height="197" className="h-[22px] w-auto" />
           </a>
 
           {/* Desktop Links */}
@@ -76,40 +64,35 @@ export default function Navbar() {
                   e.preventDefault()
                   scrollTo(link.href)
                 }}
-                className="text-sm font-medium text-muted-foreground hover:text-terracotta transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-terracotta after:rounded-full after:transition-all hover:after:w-full"
+                className="text-sm font-medium text-muted-foreground hover:text-orange-dark transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-orange after:rounded-full after:transition-all hover:after:w-full"
               >
                 {link.label}
               </a>
             ))}
-            <Button asChild size="sm" className="rounded-full bg-terracotta hover:bg-terracotta-dark text-white">
+            <Button asChild size="sm" className="rounded-lg bg-orange-dark hover:brightness-110 text-white">
               <a href="tel:3028931800">
-                <Phone className="w-3.5 h-3.5 mr-1.5" />
-                Schedule a Tour
+                Call (302) 893-1800
               </a>
             </Button>
           </div>
 
-          {/* Mobile Toggle */}
+          {/* Mobile toggle: two bars that rotate into an X. It stays above the open
+              menu (nav z-50, menu z-[45]) so it doubles as the close button. */}
           <button
-            className="md:hidden p-2"
-            onClick={() => setMobileOpen(true)}
-            aria-label="Open menu"
+            className="md:hidden relative w-10 h-10 -mr-2"
+            onClick={() => setMobileOpen((open) => !open)}
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileOpen}
           >
-            <Menu className="w-6 h-6" />
+            <span className={`absolute left-2 right-2 top-1/2 -mt-px h-0.5 rounded-full bg-foreground transition-all duration-300 ease-out ${mobileOpen ? 'rotate-45' : '-translate-y-[4px]'}`} />
+            <span className={`absolute left-2 right-2 top-1/2 -mt-px h-0.5 rounded-full bg-foreground transition-all duration-300 ease-out ${mobileOpen ? '-rotate-45' : 'translate-y-[4px]'}`} />
           </button>
         </div>
       </nav>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="fixed inset-0 bg-cream z-[999] flex flex-col items-center justify-center gap-8 animate-in fade-in duration-200">
-          <button
-            className="absolute top-5 right-5 p-2"
-            onClick={() => setMobileOpen(false)}
-            aria-label="Close menu"
-          >
-            <X className="w-7 h-7" />
-          </button>
+        <div className="fixed inset-0 bg-white z-[45] flex flex-col items-center justify-center gap-8 animate-in fade-in duration-200">
           {links.map((link) => (
             <a
               key={link.href}
@@ -123,11 +106,23 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <Button asChild className="rounded-full bg-terracotta hover:bg-terracotta-dark text-white mt-4">
-            <a href="tel:3028931800">Schedule a Tour</a>
+          <Button asChild className="rounded-lg bg-orange-dark hover:brightness-110 text-white mt-4">
+            <a href="tel:3028931800">Call to Schedule a Tour</a>
           </Button>
         </div>
       )}
+
+      {/* Mobile call bar: appears once the hero's tour button scrolls away */}
+      <a
+        href="tel:3028931800"
+        aria-hidden={!pastHero}
+        tabIndex={pastHero ? 0 : -1}
+        className={`md:hidden fixed bottom-4 inset-x-4 z-40 flex items-center justify-center rounded-lg bg-orange-dark text-white font-semibold py-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.2)] transition-all duration-300 ${
+          pastHero ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0 pointer-events-none'
+        }`}
+      >
+        Call to Schedule a Tour
+      </a>
     </>
   )
 }

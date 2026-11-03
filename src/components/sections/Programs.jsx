@@ -1,92 +1,148 @@
-import { useReveal } from '@/hooks/useReveal'
-import { Card, CardContent } from '@/components/ui/card'
-import { Baby, Footprints, Palette, BookOpen, GraduationCap } from 'lucide-react'
+// Programs: an age picker built from toy blocks (the logo's design language). Each block
+// is a tab; all five panels are rendered (inactive ones `hidden`) so the prerendered HTML
+// keeps every description for search engines. Footer links (#infant, #pre-k, ...) select
+// the matching tab via the URL hash.
+import { useEffect, useState } from 'react'
 
 const programs = [
   {
-    icon: Baby,
-    age: '6 Weeks +',
+    age: '6 weeks and up',
+    id: 'infant',
+    short: 'Infants',
     title: 'Infant Program',
-    desc: 'Our caregivers work closely with families to honor each baby\'s unique schedule. The infant area is filled with carefully chosen manipulatives and books, nurturing first learning skills through activities, stories, and song.',
-    color: 'coral',
+    desc: 'We follow your baby\'s schedule for eating and sleeping, not ours. The infant room is stocked with books and hands-on toys, and the day is full of stories, songs, and simple games.',
+    block: 'bg-blue',
+    ink: 'text-blue-dark',
   },
   {
-    icon: Footprints,
-    age: '12 – 23 Months',
+    age: '12 to 23 months',
+    id: 'one-year-olds',
+    short: 'Ones',
     title: 'One-Year-Olds',
-    desc: 'A vibrant year of discovery. We emphasize social growth, language development, and motor skills through guided exploration, sensory play, and plenty of hands-on adventures.',
-    color: 'terracotta-light',
+    desc: 'Walking, first words, and a lot of exploring. We focus on language, movement, and getting along with others, with sensory play and plenty of room to roam.',
+    block: 'bg-orange-light',
+    ink: 'text-orange-dark',
   },
   {
-    icon: Palette,
-    age: '2 Years',
+    age: '2 years',
+    id: 'toddlers',
+    short: 'Twos',
     title: 'Toddler Program',
-    desc: 'Toddlers blossom as they practice daily life skills like hand-washing, sharing, and self-expression. Creative play and structured activities build confidence and independence.',
-    color: 'gold',
+    desc: 'Two-year-olds want to do it themselves, so we let them. Children practice hand-washing, sharing, and using their words, with art and play throughout the day.',
+    block: 'bg-yellow',
+    ink: 'text-yellow-dark',
   },
   {
-    icon: BookOpen,
-    age: '3 Years',
+    age: '3 years',
+    id: 'preschool',
+    short: 'Threes',
     title: 'Preschool 3\'s',
-    desc: 'Building a foundation for life-long learning through imaginative play, music, art, reading, math, and science. Children develop critical thinking and a genuine love of discovery.',
-    color: 'sage',
+    desc: 'Pretend play, music, art, early reading, math, and science. Three-year-olds learn to ask questions and figure out the answers.',
+    block: 'bg-green',
+    ink: 'text-green-dark',
   },
   {
-    icon: GraduationCap,
-    age: '4 – 5 Years',
+    age: '4 to 5 years',
+    id: 'pre-k',
+    short: 'Pre-K',
     title: 'Pre-Kindergarten',
-    desc: 'Comprehensive kindergarten preparation focusing on social, motor, and cognitive skills. Mathematics, phonics, science, geography, and world cultures prepare children for academic success.',
-    color: 'terracotta',
+    desc: 'A full year of getting ready for kindergarten. Children work on phonics, math, science, geography, and world cultures, plus the social skills they need on day one.',
+    block: 'bg-orange',
+    ink: 'text-orange-dark',
   },
 ]
 
-const colorMap = {
-  coral: { bar: 'bg-coral', badge: 'bg-coral/10 text-terracotta-dark', icon: 'bg-coral/15', iconColor: 'text-coral' },
-  'terracotta-light': { bar: 'bg-terracotta-light', badge: 'bg-terracotta/10 text-terracotta-dark', icon: 'bg-terracotta-light/15', iconColor: 'text-terracotta-light' },
-  gold: { bar: 'bg-gold', badge: 'bg-gold/10 text-[#8A7030]', icon: 'bg-gold/12', iconColor: 'text-gold' },
-  sage: { bar: 'bg-sage', badge: 'bg-sage/10 text-sage-dark', icon: 'bg-sage/12', iconColor: 'text-sage' },
-  terracotta: { bar: 'bg-terracotta', badge: 'bg-terracotta/10 text-terracotta-dark', icon: 'bg-terracotta/12', iconColor: 'text-terracotta' },
-}
-
 export default function Programs() {
-  const ref = useReveal()
+  const [active, setActive] = useState(0)
+
+  // Footer links point at #<program id>; select that tab and bring the section into view
+  useEffect(() => {
+    const selectFromHash = () => {
+      const i = programs.findIndex((p) => `#${p.id}` === window.location.hash)
+      if (i < 0) return
+      setActive(i)
+      document.getElementById('programs')?.scrollIntoView()
+    }
+    selectFromHash()
+    window.addEventListener('hashchange', selectFromHash)
+    return () => window.removeEventListener('hashchange', selectFromHash)
+  }, [])
+
+  // Arrow keys move between tabs (WAI-ARIA tabs pattern)
+  const onKeyDown = (e) => {
+    const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key]
+    if (!step) return
+    const next = (active + step + programs.length) % programs.length
+    setActive(next)
+    document.getElementById(`tab-${programs[next].id}`)?.focus()
+  }
 
   return (
-    <section id="programs" className="py-20 lg:py-28 bg-warm-white" ref={ref}>
-      <div className="max-w-[1200px] mx-auto px-6">
-        <div className="text-center max-w-[650px] mx-auto mb-14 reveal">
-          <p className="text-xs font-semibold tracking-[0.12em] uppercase text-sage mb-3">Our Programs</p>
-          <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold leading-tight mb-3">
-            Nurturing every stage of early development
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Five thoughtfully designed classrooms, each tailored to your child's unique developmental stage.
-          </p>
-        </div>
+    <section id="programs" className="py-20 lg:py-28 bg-sky scroll-mt-20">
+      <div className="max-w-[1100px] mx-auto px-6">
+        <h2 className="font-display text-[clamp(2.25rem,4.5vw,3.25rem)] font-semibold leading-tight mb-3">
+          A classroom for every age
+        </h2>
+        <p className="text-lg text-muted-foreground mb-10 max-w-[48ch]">
+          Five classrooms, each set up for what children that age are ready to learn. Pick an age to explore the program.
+        </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 stagger">
-          {programs.map((p) => {
-            const colors = colorMap[p.color]
-            const Icon = p.icon
+        <div role="tablist" aria-label="Age groups" onKeyDown={onKeyDown} className="grid grid-cols-5 gap-2 sm:gap-4 max-w-[720px] mb-10">
+          {programs.map((p, i) => {
+            const selected = i === active
             return (
-              <Card
-                key={p.title}
-                className="reveal group border border-black/[0.04] hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(0,0,0,0.06)] transition-all duration-400 overflow-hidden relative py-0"
+              <button
+                key={p.id}
+                id={`tab-${p.id}`}
+                role="tab"
+                aria-selected={selected}
+                aria-controls={p.id}
+                tabIndex={selected ? 0 : -1}
+                onClick={() => setActive(i)}
+                className="rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-dark"
               >
-                <div className={`h-1 group-hover:h-1.5 transition-all ${colors.bar} rounded-t-lg`} />
-                <CardContent className="pt-6 pb-6 px-5">
-                  <div className={`w-14 h-14 rounded-2xl ${colors.icon} flex items-center justify-center mb-4`}>
-                    <Icon className={`w-7 h-7 ${colors.iconColor}`} strokeWidth={1.5} />
-                  </div>
-                  <span className={`inline-block text-[0.68rem] font-semibold tracking-wider uppercase px-3 py-1 rounded-full mb-3 ${colors.badge}`}>
-                    {p.age}
+                <span className={`block h-14 sm:h-16 p-2 rounded-lg ${p.block} transition-all duration-200 ${selected ? '-translate-y-1.5 shadow-[inset_0_-6px_0_rgba(0,0,0,0.22)]' : 'hover:-translate-y-0.5'}`}>
+                  <span className={`h-full bg-white rounded-sm flex items-center justify-center font-display font-bold text-sm sm:text-lg ${selected ? p.ink : 'text-foreground/70'}`}>
+                    {p.short}
                   </span>
-                  <h3 className="font-display text-lg font-medium mb-2">{p.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-                </CardContent>
-              </Card>
+                </span>
+              </button>
             )
           })}
+        </div>
+
+        <div className="grid md:grid-cols-[1.1fr_1fr] gap-8 lg:gap-14 items-center">
+          <figure>
+            <div className="aspect-[4/3] rounded-lg overflow-hidden">
+              <img
+                src="/images/kindmind/garden-discovery.webp"
+                alt="A Kind Mind Kids child proudly holding a freshly picked carrot"
+                width="1024"
+                height="1280"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <figcaption className="mt-3 text-xs text-muted-foreground">
+              Garden time with our older children. Visit to see your child's classroom.
+            </figcaption>
+          </figure>
+          <div>
+            {programs.map((p, i) => (
+              <div
+                key={p.id}
+                id={p.id}
+                role="tabpanel"
+                aria-labelledby={`tab-${p.id}`}
+                hidden={i !== active}
+              >
+                <p className={`font-semibold mb-2 ${p.ink}`}>{p.age}</p>
+                <h3 className="font-display text-3xl lg:text-4xl font-semibold mb-4">{p.title}</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,3 +1,6 @@
+// Adds `visible` to `.reveal` elements (inside the ref'd element) the first time they
+// scroll into view. Currently drives the Enrichment block-drop, the page's one
+// scroll-triggered animation (see `.block-drop` in src/index.css).
 import { useEffect, useRef } from 'react'
 
 export function useReveal(threshold = 0.15) {

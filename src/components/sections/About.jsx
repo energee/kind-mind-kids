@@ -1,61 +1,42 @@
-import { useReveal } from '@/hooks/useReveal'
-import { Heart, Users, BookOpen, ShieldCheck, Library, Palette, Music, Smile } from 'lucide-react'
 
 const values = [
-  { icon: Heart, title: 'Love & Laughter', desc: 'Nurturing through joy' },
-  { icon: Users, title: 'Family Partnership', desc: 'Working together' },
-  { icon: BookOpen, title: 'Whole-Child Learning', desc: 'Mind, body, spirit' },
-  { icon: ShieldCheck, title: 'Safe Environment', desc: 'Security first, always' },
+  { title: 'Love & Laughter', desc: 'Happy kids learn more' },
+  { title: 'Family Partnership', desc: 'We work with you, not around you' },
+  { title: 'Whole-Child Learning', desc: 'Social, emotional, and academic' },
+  { title: 'Safe Environment', desc: 'Secure entry, close supervision' },
 ]
 
-const tiles = [
-  { icon: Library, gradient: 'from-[#E8DDD0] to-[#D9CFC0]', iconColor: 'text-[#8A7A6A]' },
-  { icon: Palette, gradient: 'from-sage-light to-sage', shift: 'translate-y-6', iconColor: 'text-white' },
-  { icon: Music, gradient: 'from-terracotta-light to-terracotta', shift: '-translate-y-6', iconColor: 'text-white' },
-  { icon: Smile, gradient: 'from-gold-light to-gold', iconColor: 'text-white' },
-]
 
 export default function About() {
-  const ref = useReveal()
-
   return (
-    <section id="about" className="py-20 lg:py-28 bg-white" ref={ref}>
+    <section id="about" className="py-20 lg:py-28 bg-white">
       <div className="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-        {/* Visual grid */}
-        <div className="reveal grid grid-cols-2 gap-3 md:order-first order-last">
-          {tiles.map((tile, i) => {
-            const Icon = tile.icon
-            return (
-              <div
-                key={i}
-                className={`bg-gradient-to-br ${tile.gradient} rounded-2xl aspect-square flex items-center justify-center hover:scale-[1.03] transition-transform ${tile.shift || ''}`}
-              >
-                <Icon className={`w-16 h-16 ${tile.iconColor}`} strokeWidth={1.3} />
-              </div>
-            )
-          })}
+        <div className="md:order-first order-last flex justify-center">
+          <img
+            src="/brand/kmk-logo-slogan.svg"
+            alt="Kind Mind Kids logo: two children reaching for stars above building blocks spelling KMK, with the slogan Growing Kindness, Inspiring Minds"
+            width="1752"
+            height="1198"
+            loading="lazy"
+            decoding="async"
+            className="w-full max-w-[500px] h-auto"
+          />
         </div>
 
         {/* Content */}
-        <div className="reveal">
-          <p className="text-xs font-semibold tracking-[0.12em] uppercase text-sage mb-3">Our Philosophy</p>
+        <div>
           <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold leading-tight mb-5">
-            We celebrate the inner qualities of children that are meant to shine brightly
+            Small enough to know every child
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            Since 2010, Kind Mind Kids has been more than a daycare — we're a family. Our intimate setting of just 38 children means your child receives truly personalized attention in a safe, supportive, and engaging environment where kindness is at the heart of everything we do.
+            Kind Mind Kids opened in 2010. We cap enrollment at 38 children, so our teachers get to know each child and each family well. We teach kindness the same way we teach letters and numbers: every day, on purpose.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {values.map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-xl bg-sage/10 flex items-center justify-center shrink-0">
-                  <Icon className="w-5 h-5 text-sage" />
-                </div>
-                <div>
-                  <p className="font-semibold text-sm">{title}</p>
-                  <p className="text-xs text-muted-foreground">{desc}</p>
-                </div>
+          <div className="grid grid-cols-2 gap-x-6 gap-y-5">
+            {values.map(({ title, desc }) => (
+              <div key={title}>
+                <p className="font-semibold">{title}</p>
+                <p className="text-sm text-muted-foreground">{desc}</p>
               </div>
             ))}
           </div>

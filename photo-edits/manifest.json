@@ -1,0 +1,293 @@
+{
+  "sourcePage": "https://www.facebook.com/kindmindkids/photos",
+  "reviewedPublicPhotos": 56,
+  "selectedPhotos": 6,
+  "permission": "User confirmed these photos are approved for use.",
+  "processing": "Individual white balance, selective shadow recovery, softly masked exposure corrections, restrained color correction, editorial cropping, web-only output sharpening. Original people and locations retained; no generative edits or skin smoothing. Exports use embedded sRGB profiles without original EXIF metadata.",
+  "scope": "All website photography replaced with these six approved Kind Mind Kids photos. The hero has responsive portrait and landscape crops. Program tabs share a garden activity photo explicitly captioned as older children; the facilities section shows a garden activity with a tour caption, not classroom interiors. All three farm photos appear in enrichment as outings. No stock photos remain; brand logos are unchanged.",
+  "images": [
+    {
+      "name": "garden-with-teacher",
+      "source": "https://www.facebook.com/photo.php?fbid=1603643314796896&set=pb.100054537291173.-2207520000&type=3",
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        220,
+        1536,
+        1860
+      ],
+      "webDimensions": [
+        1199,
+        1280
+      ],
+      "edits": {
+        "crop": [
+          0,
+          220,
+          1536,
+          1860
+        ],
+        "shadows": 0.15,
+        "exposure": 1.015,
+        "saturation": 0.96,
+        "balance": [
+          1.008,
+          1.0,
+          0.995
+        ],
+        "dodge": [
+          [
+            0.4,
+            0.26,
+            0.19,
+            0.2,
+            0.1
+          ]
+        ]
+      },
+      "alt": "An educator and children examining a freshly harvested carrot",
+      "webBytes": 348794
+    },
+    {
+      "name": "garden-discovery",
+      "source": "https://www.facebook.com/photo.php?fbid=1603643201463574&set=pb.100054537291173.-2207520000&type=3",
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "crop": [
+        140,
+        300,
+        1370,
+        1838
+      ],
+      "webDimensions": [
+        1024,
+        1280
+      ],
+      "edits": {
+        "crop": [
+          140,
+          300,
+          1370,
+          1838
+        ],
+        "shadows": 0.1,
+        "exposure": 1.015,
+        "saturation": 0.97,
+        "balance": [
+          1.005,
+          1.0,
+          1.0
+        ],
+        "dodge": [
+          [
+            0.48,
+            0.34,
+            0.2,
+            0.18,
+            0.06
+          ]
+        ]
+      },
+      "alt": "A child proudly holding a freshly picked carrot",
+      "webBytes": 162642
+    },
+    {
+      "name": "learning-in-the-garden",
+      "source": "https://www.facebook.com/photo.php?fbid=1603643178130243&set=pb.100054537291173.-2207520000&type=3",
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        200,
+        1536,
+        1670
+      ],
+      "webDimensions": [
+        1280,
+        1225
+      ],
+      "edits": {
+        "crop": [
+          0,
+          200,
+          1536,
+          1670
+        ],
+        "shadows": 0.13,
+        "exposure": 1.015,
+        "saturation": 0.96,
+        "balance": [
+          1.005,
+          1.0,
+          1.0
+        ],
+        "dodge": []
+      },
+      "alt": "Children and an educator sharing a garden discovery",
+      "webBytes": 434746
+    },
+    {
+      "name": "friends-at-the-farm",
+      "source": "https://www.facebook.com/photo.php?fbid=1638100428017851&set=pb.100054537291173.-2207520000&type=3",
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        400,
+        1536,
+        1940
+      ],
+      "webDimensions": [
+        1277,
+        1280
+      ],
+      "edits": {
+        "crop": [
+          0,
+          400,
+          1536,
+          1940
+        ],
+        "shadows": 0.23,
+        "exposure": 1.0,
+        "saturation": 0.96,
+        "balance": [
+          0.995,
+          1.0,
+          1.018
+        ],
+        "dodge": [
+          [
+            0.51,
+            0.59,
+            0.42,
+            0.22,
+            0.1
+          ]
+        ]
+      },
+      "alt": "Children standing together among pumpkins at a farm",
+      "webBytes": 366234
+    },
+    {
+      "name": "hayride-friends",
+      "source": "https://www.facebook.com/photo.php?fbid=1638100281351199&set=pb.100054537291173.-2207520000&type=3",
+      "sourceDimensions": [
+        2048,
+        1536
+      ],
+      "crop": [
+        50,
+        120,
+        1998,
+        1536
+      ],
+      "webDimensions": [
+        1280,
+        930
+      ],
+      "edits": {
+        "crop": [
+          50,
+          120,
+          1998,
+          1536
+        ],
+        "shadows": 0.19,
+        "exposure": 0.99,
+        "saturation": 0.95,
+        "balance": [
+          0.99,
+          1.0,
+          1.025
+        ],
+        "dodge": [
+          [
+            0.45,
+            0.48,
+            0.4,
+            0.26,
+            0.04
+          ]
+        ]
+      },
+      "alt": "Three children sitting together on a hayride",
+      "webBytes": 197650
+    },
+    {
+      "name": "playful-tunnel",
+      "source": "https://www.facebook.com/photo.php?fbid=1638101321351095&set=pb.100054537291173.-2207520000&type=3",
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        160,
+        1536,
+        1840
+      ],
+      "webDimensions": [
+        1170,
+        1280
+      ],
+      "edits": {
+        "crop": [
+          0,
+          160,
+          1536,
+          1840
+        ],
+        "shadows": 0.18,
+        "exposure": 0.995,
+        "saturation": 0.95,
+        "balance": [
+          0.995,
+          1.0,
+          1.012
+        ],
+        "dodge": [
+          [
+            0.43,
+            0.43,
+            0.18,
+            0.18,
+            0.13
+          ]
+        ]
+      },
+      "alt": "A smiling child waving through a painted tire tunnel",
+      "webBytes": 435956
+    },
+    {
+      "name": "garden-with-teacher-hero",
+      "source": "https://www.facebook.com/photo.php?fbid=1603643314796896&set=pb.100054537291173.-2207520000&type=3",
+      "sourceDimensions": [
+        1536,
+        2048
+      ],
+      "crop": [
+        0,
+        270,
+        1536,
+        1294
+      ],
+      "webDimensions": [
+        1536,
+        1024
+      ],
+      "webBytes": 317358,
+      "alt": "An educator and children examining a freshly harvested carrot",
+      "edits": "Same photographic corrections as garden-with-teacher; additional landscape crop."
+    }
+  ]
+}

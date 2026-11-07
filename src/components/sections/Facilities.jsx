@@ -33,8 +33,8 @@ export default function Facilities() {
             <img
               src="/images/kindmind/outdoor-water-play.webp"
               alt="Children exploring outdoor water tables with an adult nearby"
-              width="1280"
-              height="960"
+              width="1024"
+              height="768"
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover"

@@ -21,7 +21,7 @@ export default function CTA() {
         <h2 className="font-display text-[clamp(2.25rem,5vw,3.5rem)] font-semibold leading-tight text-white mb-4">
           Come see us in person
         </h2>
-        <p className="text-lg text-white/90 leading-relaxed mb-8">
+        <p className="text-lg text-white leading-relaxed mb-8">
           The best way to know if we're the right fit is to visit. Call to schedule a tour. We keep enrollment small, so spots fill up.
         </p>
         <div className="flex flex-wrap justify-center gap-3">

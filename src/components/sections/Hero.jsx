@@ -31,14 +31,14 @@ export default function Hero() {
               <source
                 media="(min-width: 768px)"
                 srcSet="/images/kindmind/garden-with-teacher.webp"
-                width="1199"
-                height="1280"
+                width="960"
+                height="1025"
               />
               <img
                 src="/images/kindmind/garden-with-teacher-hero.webp"
                 alt="An educator and Kind Mind Kids children examining a freshly harvested carrot"
-                width="1536"
-                height="1024"
+                width="1024"
+                height="683"
                 fetchPriority="high"
                 className="w-full h-full object-cover"
               />

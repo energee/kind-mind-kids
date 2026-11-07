@@ -105,8 +105,8 @@
         1860
       ],
       "webDimensions": [
-        1199,
-        1280
+        960,
+        1025
       ],
       "edits": {
         "crop": [
@@ -134,7 +134,7 @@
         ]
       },
       "alt": "An educator and children examining a freshly harvested carrot",
-      "webBytes": 348794,
+      "webBytes": 221434,
       "section": "hero"
     },
     {
@@ -151,10 +151,10 @@
         1294
       ],
       "webDimensions": [
-        1536,
-        1024
+        1024,
+        683
       ],
-      "webBytes": 317358,
+      "webBytes": 150944,
       "alt": "An educator and children examining a freshly harvested carrot",
       "edits": "Same photographic corrections as garden-with-teacher; additional landscape crop.",
       "section": "hero"
@@ -265,10 +265,10 @@
         1640
       ],
       "webDimensions": [
-        1280,
-        1280
+        1024,
+        1024
       ],
-      "webBytes": 260536,
+      "webBytes": 154698,
       "edits": {
         "shadows": 0.15,
         "exposure": 1.025,
@@ -353,10 +353,10 @@
         1536
       ],
       "webDimensions": [
-        1280,
-        1280
+        1024,
+        1024
       ],
-      "webBytes": 269892,
+      "webBytes": 155866,
       "edits": {
         "shadows": 0.1,
         "exposure": 1.01,
@@ -397,10 +397,10 @@
         1505
       ],
       "webDimensions": [
-        1280,
-        960
+        1024,
+        768
       ],
-      "webBytes": 355634,
+      "webBytes": 204402,
       "edits": {
         "shadows": 0.18,
         "exposure": 1.005,
@@ -441,10 +441,10 @@
         1557
       ],
       "webDimensions": [
-        1280,
-        960
+        1024,
+        768
       ],
-      "webBytes": 334104,
+      "webBytes": 198246,
       "edits": {
         "shadows": 0.12,
         "exposure": 1.02,
@@ -473,7 +473,7 @@
         "type": "public-facebook",
         "page": "https://www.facebook.com/photo/?fbid=833527768475125&set=a.586779566483281",
         "file": "originals/indoor-soccer-group.jpg",
-        "postText": "Log In\nForgot Account?\nKind Mind Kids Early Learning Center\nSeptember 27, 2023, view post\nWednesday, September 27, 2023 at 12:09\u202fPM\nSeptember 27, 2023\n\u00a0\n\u00b7\nLike\nComment\nComments\nNo comments yet\nBe the first to comment.\nSee more on Facebook\nEmail or phone number\nPassword\nLog In\nForgot password?\nor\nCreate new account"
+        "postText": "Log In\nForgot Account?\nKind Mind Kids Early Learning Center\nSeptember 27, 2023, view post\nWednesday, September 27, 2023 at 12:09 PM\nSeptember 27, 2023\n \n·\nLike\nComment\nComments\nNo comments yet\nBe the first to comment.\nSee more on Facebook\nEmail or phone number\nPassword\nLog In\nForgot password?\nor\nCreate new account"
       },
       "sourceDimensions": [
         960,
@@ -531,10 +531,10 @@
         1536
       ],
       "webDimensions": [
-        1280,
-        960
+        1024,
+        768
       ],
-      "webBytes": 358554,
+      "webBytes": 200690,
       "edits": {
         "shadows": 0.18,
         "exposure": 0.995,

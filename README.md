@@ -1,19 +1,15 @@
-# React + Vite
+# Kind Mind Kids
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website for Kind Mind Kids Early Learning Center, a daycare and preschool in Wilmington,
+DE. A single-page React + Vite site, prerendered at build time and served from GitHub
+Pages at https://kindmindkids.org/.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```sh
+npm ci
+npm run dev      # local dev server
+npm run build    # production build with prerendered HTML, into dist/
+npm run preview  # serve dist/ locally
+```
 
 ## Brand assets
 
@@ -62,7 +58,11 @@ Brand logos are unchanged.
 Corrections include individual white balance, selective shadow recovery, gentle
 exposure correction, restrained color, composition crops, and web output
 sharpening. No people, facial features, or locations were generated or replaced.
-Exports use sRGB color profiles and omit original EXIF metadata. The farm images
+Exports use sRGB color profiles and omit original EXIF metadata. The seven largest
+exports (hero crops, Facilities, the corn and camping photos, and the Twos and Pre-K
+photos) are 960 to 1024px wide at WebP quality 78, resized from the JPEG masters in the
+photo package. That still covers a 3x phone and a 2x desktop slot. Re-export from those
+masters rather than the WebP files, so quality isn't lost twice. The farm images
 depict an outing and must not be presented as the center's facilities.
 
 `photo-edits/before-after.jpg` compares the current ten selected scenes.

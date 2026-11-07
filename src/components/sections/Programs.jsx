@@ -36,8 +36,8 @@ const programs = [
   {
     image: '/images/kindmind/toddler-sensory.webp',
     alt: 'Children exploring cups, colorful pom-poms, and tubes at a classroom sensory table',
-    imageWidth: 1280,
-    imageHeight: 1280,
+    imageWidth: 1024,
+    imageHeight: 1024,
     caption: 'Exploring textures and playing alongside friends.',
     age: '2 years',
     id: 'toddlers',
@@ -64,8 +64,8 @@ const programs = [
   {
     image: '/images/kindmind/pre-k-discovery.webp',
     alt: 'A child holding an activity sheet with pictures of community helpers',
-    imageWidth: 1280,
-    imageHeight: 1280,
+    imageWidth: 1024,
+    imageHeight: 1024,
     caption: 'New ideas and discoveries, one activity at a time.',
     age: '4 to 5 years',
     id: 'pre-k',

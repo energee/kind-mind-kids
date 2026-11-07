@@ -22,7 +22,7 @@ export default function Enrichment() {
           <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-semibold leading-tight mb-3">
             More than the basics
           </h2>
-          <p className="text-lg text-white/85">
+          <p className="text-lg text-white">
             Five enrichment activities give children new ways to move, create, and learn.
           </p>
         </div>
@@ -40,7 +40,7 @@ export default function Enrichment() {
                 </div>
               </div>
               <h3 className="font-display text-lg font-medium mb-2">{a.title}</h3>
-              <p className="text-sm text-white/85 leading-relaxed">{a.desc}</p>
+              <p className="text-sm text-white leading-relaxed">{a.desc}</p>
             </div>
           ))}
         </div>
@@ -51,14 +51,14 @@ export default function Enrichment() {
               <img
                 src="/images/kindmind/farm-corn-discovery.webp"
                 alt="Children watching a corn demonstration during a farm visit"
-                width="1280"
-                height="960"
+                width="1024"
+                height="768"
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>
-            <figcaption className="mt-3 text-sm text-white/85">
+            <figcaption className="mt-3 text-sm text-white">
               Learning about corn during a farm visit.
             </figcaption>
           </figure>
@@ -74,7 +74,7 @@ export default function Enrichment() {
                 className="w-full h-full object-cover"
               />
             </div>
-            <figcaption className="mt-3 text-sm text-white/85">
+            <figcaption className="mt-3 text-sm text-white">
               Practicing movement and taking turns at soccer.
             </figcaption>
           </figure>
@@ -83,14 +83,14 @@ export default function Enrichment() {
               <img
                 src="/images/kindmind/camping-friends.webp"
                 alt="Four children sharing a trail-mix break on a bench during a camping outing"
-                width="1280"
-                height="960"
+                width="1024"
+                height="768"
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover"
               />
             </div>
-            <figcaption className="mt-3 text-sm text-white/85">
+            <figcaption className="mt-3 text-sm text-white">
               Sharing a trail-mix break on our camping outing.
             </figcaption>
           </figure>

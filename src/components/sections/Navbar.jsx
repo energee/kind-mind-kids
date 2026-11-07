@@ -15,6 +15,20 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // While the mobile menu is open, the page behind it stays put and Escape closes it
+  useEffect(() => {
+    if (!mobileOpen) return
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') setMobileOpen(false)
+    }
+    document.documentElement.style.overflow = 'hidden'
+    document.addEventListener('keydown', onKeyDown)
+    return () => {
+      document.documentElement.style.overflow = ''
+      document.removeEventListener('keydown', onKeyDown)
+    }
+  }, [mobileOpen])
+
   const links = [
     { label: 'About', href: '#about' },
     { label: 'Programs', href: '#programs' },

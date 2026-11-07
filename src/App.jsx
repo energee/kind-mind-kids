@@ -17,16 +17,18 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <WhyUs />
-      <About />
-      <Programs />
-      <Enrichment />
-      {/* <Testimonials /> */}
-      <Facilities />
-      <Faq />
-      <CTA />
-      <Contact />
+      <main>
+        <Hero />
+        <WhyUs />
+        <About />
+        <Programs />
+        <Enrichment />
+        {/* <Testimonials /> */}
+        <Facilities />
+        <Faq />
+        <CTA />
+        <Contact />
+      </main>
       <Footer />
     </>
   )

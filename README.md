@@ -72,6 +72,25 @@ contains all nine untouched uploads (including the two not selected), the three
 retained Facebook source downloads, eleven JPEG edited masters, eleven WebP
 exports, the comparison sheet, and the current manifest.
 
+## Fonts
+
+Headings use Quicksand and body text uses DM Sans. Both are self-hosted in `src/fonts/` and
+embedded in the CSS bundle by the `@font-face` rules at the top of `src/index.css`. Because
+the browser waits for that CSS before painting, text never appears in a fallback font
+first, so nothing shifts when the fonts load. The fonts add about 46 KB (compressed) to
+the CSS the browser loads before first paint. That replaces about 66 KB that used to come
+from Google Fonts after the first paint.
+
+- `quicksand-latin.woff2` is Google Fonts' unmodified Latin file for Quicksand (variable
+  weight). It is left unmodified because its license reserves the name "Quicksand" for the
+  original font.
+- `dm-sans-subset.woff2` is DM Sans, cut down with fontTools 4.55 to the 400 to 700 weight
+  range and to printable ASCII, non-breaking space, ©, en and em dashes, curly quotes,
+  bullet, and ellipsis. A character outside that set, such as "é", falls back to the system
+  font. To add characters, regenerate the file from Google's DM Sans Latin file with
+  `fontTools.varLib.instancer` (wght 400:700) and `pyftsubset` (`--flavor=woff2`).
+- Both fonts are under the SIL Open Font License. Its text is in `src/fonts/*-OFL.txt`.
+
 ## SEO and answer engines
 
 - **Prerendered HTML.** `npm run build` renders the app to static HTML

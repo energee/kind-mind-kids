@@ -2,6 +2,29 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* Brand fonts, self-hosted and embedded in this stylesheet as data URLs (the ?inline
+   suffix tells Vite to inline them). The browser waits for this CSS before first paint, so
+   text first appears in Quicksand and DM Sans and never swaps from a fallback font, which
+   is what caused the font shift. font-display: block covers the moment it takes to decode
+   the data URLs, so the fallback font is never shown. Files and licenses: src/fonts/ and
+   "Fonts" in README.md. */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: block;
+  src: url('./fonts/quicksand-latin.woff2?inline') format('woff2');
+}
+/* DM Sans is subset to plain ASCII plus a few typographic characters and the 400 to 700
+   weights (see README.md). A character it lacks renders in the fallback font. */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: block;
+  src: url('./fonts/dm-sans-subset.woff2?inline') format('woff2');
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

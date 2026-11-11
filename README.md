@@ -43,10 +43,10 @@ Each program tab has its own square photograph:
 | Program | Image | Uploaded attachment |
 | --- | --- | --- |
 | Infants | `infant-ball-play.webp` | 3 |
-| One-year-olds | `one-year-sensory.webp` | 7 |
-| Two-year-olds | `toddler-sensory.webp` | 9 |
-| Preschool | `preschool-outdoor-play.webp` | 5 |
-| Pre-K | `pre-k-discovery.webp` | 4 |
+| Toddler 1 | `one-year-sensory.webp` | 7 |
+| Toddler 2 | `toddler-sensory.webp` | 9 |
+| Twos | `preschool-outdoor-play.webp` | 5 |
+| Preschool | `pre-k-discovery.webp` | 4 |
 
 Placements are editorial age-appropriate selections; exact ages and classroom
 membership were not supplied. Alt text and captions describe visible activities
@@ -59,7 +59,7 @@ Corrections include individual white balance, selective shadow recovery, gentle
 exposure correction, restrained color, composition crops, and web output
 sharpening. No people, facial features, or locations were generated or replaced.
 Exports use sRGB color profiles and omit original EXIF metadata. The seven largest
-exports (hero crops, Facilities, the corn and camping photos, and the Twos and Pre-K
+exports (hero crops, Facilities, the corn and camping photos, and the Toddler 2 and Preschool
 photos) are 960 to 1024px wide at WebP quality 78, resized from the JPEG masters in the
 photo package. That still covers a 3x phone and a 2x desktop slot. Re-export from those
 masters rather than the WebP files, so quality isn't lost twice. The farm images

@@ -64,8 +64,8 @@ export default function Navbar() {
               window.scrollTo({ top: 0, behavior: 'smooth' })
             }}
           >
-            <img src="/brand/kmk-mark.svg" alt="" width="1010" height="833" className="h-11 w-auto" />
-            <img src="/brand/kmk-wordmark.svg" alt="Kind Mind Kids" width="1752" height="197" className="h-[22px] w-auto" />
+            <img src="/brand/kmk-mark.svg" alt="" width="1010" height="833" className="h-11 max-[359px]:h-9 w-auto" />
+            <img src="/brand/kmk-wordmark.svg" alt="Kind Mind Kids" width="1752" height="197" className="h-[22px] max-[359px]:h-[18px] w-auto" />
           </a>
 
           {/* Desktop Links */}

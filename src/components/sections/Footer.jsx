@@ -31,7 +31,7 @@ export default function Footer() {
           <div>
             <h3 className="font-display text-base font-medium text-white mb-4">Programs</h3>
             <div className="flex flex-col gap-2">
-              {[['Infant Care', 'infant'], ['One-Year-Olds', 'one-year-olds'], ['Toddler Program', 'toddlers'], ["Preschool 3's", 'preschool'], ['Pre-Kindergarten', 'pre-k']].map(([p, id]) => (
+              {[['Infants', 'infant'], ['Toddler 1', 'toddler-1'], ['Toddler 2', 'toddler-2'], ['Twos', 'twos'], ['Preschool', 'preschool']].map(([p, id]) => (
                 <a key={p} href={`#${id}`} className="text-sm hover:text-orange-light transition-colors">{p}</a>
               ))}
             </div>

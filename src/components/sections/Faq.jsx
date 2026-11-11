@@ -7,7 +7,7 @@ import { ChevronDown } from 'lucide-react'
 const faqs = [
   {
     q: 'What ages does Kind Mind Kids care for?',
-    a: 'We care for children from 6 weeks to 5 years old in five classrooms: infants (6 weeks and up), one-year-olds (12 to 23 months), toddlers (2 years), preschool 3s, and Pre-K (4 to 5 years).',
+    a: 'We care for children from 6 weeks to 5 years old in five classrooms: infants (6 weeks to 1 year), Toddler 1 (12 to 18 months), Toddler 2 (18 months to 2 years), Twos (2 to 3 years), and Preschool (3 to 5 years).',
   },
   {
     q: 'What are your hours?',
@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: 'How big are your classes?',
-    a: 'We cap total enrollment at 38 children, so teachers get to know every child and family well.',
+    a: 'We cap total enrollment at 35 children, so teachers get to know every child and family well.',
   },
   {
     q: 'Are you licensed and rated?',
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: 'Do you prepare children for kindergarten?',
-    a: 'Yes. Our Pre-K year covers phonics, math, science, geography, and world cultures, along with the social skills children need on their first day of kindergarten.',
+    a: 'Yes. Our preschool program covers phonics, math, science, geography, and world cultures, along with the social skills children need on their first day of kindergarten.',
   },
   {
     q: 'Do you have openings, and how much is tuition?',

@@ -1,6 +1,6 @@
 // Programs: an age picker built from toy blocks (the logo's design language). Each block
 // is a tab; all five panels are rendered (inactive ones `hidden`) so the prerendered HTML
-// keeps every description for search engines. Footer links (#infant, #pre-k, ...) select
+// keeps every description for search engines. Footer links (#infant, #preschool, ...) select
 // the matching tab via the URL hash.
 import { useEffect, useState } from 'react'
 
@@ -11,7 +11,7 @@ const programs = [
     imageWidth: 720,
     imageHeight: 720,
     caption: 'Colorful discoveries and time together.',
-    age: '6 weeks and up',
+    age: '6 weeks to 1 year',
     id: 'infant',
     short: 'Infants',
     title: 'Infant Program',
@@ -25,11 +25,11 @@ const programs = [
     imageWidth: 1280,
     imageHeight: 1280,
     caption: 'Hands-on discoveries at the sensory table.',
-    age: '12 to 23 months',
-    id: 'one-year-olds',
-    short: 'Ones',
-    title: 'One-Year-Olds',
-    desc: 'Walking, first words, and a lot of exploring. We focus on language, movement, and getting along with others, with sensory play and plenty of room to roam.',
+    age: '12 to 18 months',
+    id: 'toddler-1',
+    short: 'Toddler 1',
+    title: 'Toddler 1',
+    desc: 'First steps and first words. Sensory play, songs, and plenty of safe room to roam help new walkers explore.',
     block: 'bg-orange-light',
     ink: 'text-orange-dark',
   },
@@ -39,11 +39,11 @@ const programs = [
     imageWidth: 1024,
     imageHeight: 1024,
     caption: 'Exploring textures and playing alongside friends.',
-    age: '2 years',
-    id: 'toddlers',
-    short: 'Twos',
-    title: 'Toddler Program',
-    desc: 'Two-year-olds want to do it themselves, so we let them. Children practice hand-washing, sharing, and using their words, with art and play throughout the day.',
+    age: '18 months to 2 years',
+    id: 'toddler-2',
+    short: 'Toddler 2',
+    title: 'Toddler 2',
+    desc: 'A lot of new words and a lot of moving. We focus on language, movement, and getting along with others.',
     block: 'bg-yellow',
     ink: 'text-yellow-dark',
   },
@@ -53,11 +53,11 @@ const programs = [
     imageWidth: 720,
     imageHeight: 720,
     caption: 'Room to move, laugh, and play together.',
-    age: '3 years',
-    id: 'preschool',
-    short: 'Threes',
-    title: 'Preschool 3\'s',
-    desc: 'Pretend play, music, art, early reading, math, and science. Three-year-olds learn to ask questions and figure out the answers.',
+    age: '2 to 3 years',
+    id: 'twos',
+    short: 'Twos',
+    title: 'Twos',
+    desc: 'Two-year-olds want to do it themselves, so we let them. Children practice hand-washing, sharing, and using their words, with art and play throughout the day.',
     block: 'bg-green',
     ink: 'text-green-dark',
   },
@@ -67,11 +67,11 @@ const programs = [
     imageWidth: 1024,
     imageHeight: 1024,
     caption: 'New ideas and discoveries, one activity at a time.',
-    age: '4 to 5 years',
-    id: 'pre-k',
-    short: 'Pre-K',
-    title: 'Pre-Kindergarten',
-    desc: 'A full year of getting ready for kindergarten. Children work on phonics, math, science, geography, and world cultures, plus the social skills they need on day one.',
+    age: '3 to 5 years',
+    id: 'preschool',
+    short: 'Preschool',
+    title: 'Preschool',
+    desc: 'Pretend play, music, art, early reading, math, and science, building to a full year of kindergarten readiness: phonics, geography, world cultures, and the social skills children need on day one.',
     block: 'bg-orange',
     ink: 'text-orange-dark',
   },
@@ -112,7 +112,7 @@ export default function Programs() {
           Five classrooms, each set up for what children that age are ready to learn. Pick an age to explore the program.
         </p>
 
-        <div role="tablist" aria-label="Age groups" onKeyDown={onKeyDown} className="grid grid-cols-5 gap-2 sm:gap-4 max-w-[720px] mb-10">
+        <div role="tablist" aria-label="Age groups" onKeyDown={onKeyDown} className="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-4 max-w-[720px] mb-10">
           {programs.map((p, i) => {
             const selected = i === active
             return (
@@ -127,7 +127,7 @@ export default function Programs() {
                 className="rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-dark"
               >
                 <span className={`block h-14 sm:h-16 p-2 rounded-lg ${p.block} transition-all duration-200 ${selected ? '-translate-y-1.5 shadow-[inset_0_-6px_0_rgba(0,0,0,0.22)]' : 'hover:-translate-y-0.5'}`}>
-                  <span className={`h-full bg-white rounded-sm flex items-center justify-center font-display font-bold text-sm sm:text-lg ${selected ? p.ink : 'text-foreground/70'}`}>
+                  <span className="h-full bg-white rounded-sm flex items-center justify-center font-display font-bold text-sm sm:text-lg text-foreground">
                     {p.short}
                   </span>
                 </span>

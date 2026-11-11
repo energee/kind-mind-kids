@@ -36,7 +36,7 @@ export default function Enrichment() {
             >
               <div style={{ '--i': i }} className={`block-drop w-24 h-24 mx-auto mb-5 p-3 rounded-lg ${a.block} ${a.tilt} shadow-[inset_0_-6px_0_rgba(0,0,0,0.15)]`}>
                 <div className="w-full h-full bg-white rounded-sm flex items-center justify-center">
-                  <span aria-hidden="true" className={`text-5xl font-extrabold leading-none ${a.letter}`}>{a.title[0]}</span>
+                  <span aria-hidden="true" className={`font-display text-5xl font-bold leading-none ${a.letter}`}>{a.title[0]}</span>
                 </div>
               </div>
               <h3 className="font-display text-lg font-medium mb-2">{a.title}</h3>

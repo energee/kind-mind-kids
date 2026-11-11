@@ -29,7 +29,7 @@ export default function About() {
             Small enough to know every child
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-            Kind Mind Kids opened in 2010. We cap enrollment at 38 children, so our teachers get to know each child and each family well. We teach kindness the same way we teach letters and numbers: every day, on purpose.
+            Kind Mind Kids opened in 2010. We cap enrollment at 35 children, so our teachers get to know each child and each family well. We teach kindness the same way we teach letters and numbers: every day, on purpose.
           </p>
 
           <div className="grid grid-cols-2 gap-x-6 gap-y-5">
